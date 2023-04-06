@@ -1,0 +1,166 @@
+/*===== Base Styles =====*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    overflow: auto;
+  }
+  
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    margin-bottom: 20px;
+  }
+  
+  a {
+    color: #333;
+  }
+  
+  a:hover {
+    color: #e91e63;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  /*===== Header Styles =====*/
+  
+  header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-image: url('https://interncrowd.in/images/home-1-1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    height: 70px;
+  }
+  
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .logo a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    list-style: none;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .nav-links li a:hover {
+    color: #e91e63;
+  }
+  
+  .cta-btn {
+    display: inline-block;
+    background-color: #e91e63;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .cta-btn:hover {
+    background-color: #fff;
+    color: #e91e63;
+    border: 2px solid #e91e63;
+  }
+  
+  /*===== Hero Section Styles =====*/
+  
+  .hero {
+    position: relative;
+    height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-text {
+    color: #fff;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+ 
+
+
+  /*===== Footer Styles =====*/
+  
+  footer {
+    padding: 20px 50px;
+    background-color: #f7f7f7;
+    text-align: center;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .footer-links li {
+    margin-right: 10px;
+  }
+  
+  .footer-links li a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .footer-links li a:hover {
+    color: #e91e63;
+  }
+  
+   
