@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <head>
+        <title>Login and Signup Page</title>
+        <style>
+            /* CSS Styles */
+            /* Global styles */
+
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                background-color: #f5f5f5;
+                font-family: Arial, sans-serif;
+                font-size: 16px;
+            }
+
+            #container {
+                background-color: #fff;
+                margin: auto;
+                padding: 20px;
+                width: 400px;
+                box-shadow: 0px 0px 5px 0px #ccc;
+            }
+
+            form {
+                background-color: #fff;
+                padding: 30px;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            label {
+                display: block;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="password"] {
+                display: block;
+                width: 100%;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                margin-bottom: 20px;
+                font-size: 16px;
+                background-color: #f5f5f5;
+            }
+
+            input[type="checkbox"] {
+                margin-right: 10px;
+            }
+
+            button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                opacity: 0.9;
+            }
+
+
+
+            button[type="submit"]:hover {
+                background-color: #0062cc;
+            }
+
+            .cancelbtn {
+                width: auto;
+                padding: 10px 18px;
+                background-color: #f44336;
+            }
+
+            span.psw {
+                float: right;
+                padding-top: 16px;
+            }
+
+            a {
+                color: #007bff;
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            /* Responsive styles */
+            @media screen and (max-width: 600px) {
+                span.psw {
+                    display: block;
+                    float: none;
+                }
+
+                .cancelbtn {
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+
+<body>
+    <div id="container">
+        <h2>Login Form</h2>
+        <form action="">
+            <div class="container">
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" required>
+
+                <button type="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+    </div>
+    <br>
+    <div id="container">
+        <h2>Signup Form</h2>
+        <form action="">
+            <div class="container">
+                <label for="name"><b>Name</b></label>
+                <input type="text" placeholder="Enter Name" name="name" required>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" required>
+
+                <label for="password-confirm"><b>Confirm Password </b></label>
+                <input type="password" placeholder="Confirm Password" name="password-confirm" required>
+
+                <label>
+                    <input type="checkbox" checked="checked" name="terms"> I agree to the <a href="#">terms and
+                        conditions</a>
+                </label>
+
+                <button type="submit">Sign Up</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        // JavaScript code for login form
+        const loginForm = document.querySelector('form[action=""]');
+        loginForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const email = loginForm.querySelector('input[name="email"]').value;
+            const password = loginForm.querySelector('input[name="password"]').value;
+            // Use AJAX or fetch to send the data to the server for authentication
+            console.log(`Email: ${email}, Password: ${password}`);
+        });
+
+        // JavaScript code for sign up form
+        const signupForm = document.querySelector('form[action=""]');
+        signupForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = signupForm.querySelector('input[name="name"]').value;
+            const email = signupForm.querySelector('input[name="email"]').value;
+            const password = signupForm.querySelector('input[name="password"]').value;
+            const confirmPassword = signupForm.querySelector('input[name="password-confirm"]').value;
+            const terms = signupForm.querySelector('input[name="terms"]').checked;
+            if (password !== confirmPassword) {
+                alert('Passwords do not match');
+                return;
+            }
+            if (!terms) {
+                alert('Please agree to the terms and conditions');
+                return;
+            }
+            // Use AJAX or fetch to send the data to the server for registration
+            console.log(`Name: ${name}, Email: ${email}, Password: ${password}`);
+        });
+    </script>
+</body>
+
+</html>
